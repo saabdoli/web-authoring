@@ -21,8 +21,8 @@ RSpec.describe Comment, :type => :model do
     expect(comment).to_not be_valid
   end
 
-  it 'is not valid without parent article' do
-    comment = FactoryGirl.build(:comment, article_id: nil)
+  it 'is not valid without parent post' do
+    comment = FactoryGirl.build(:comment, post_id: nil)
     expect(comment).to_not be_valid
   end
 end

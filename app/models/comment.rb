@@ -2,7 +2,7 @@
 
 # Comment model
 class Comment < ApplicationRecord
-  belongs_to :article
+  belongs_to :post
   validates :commenter,
             presence: true
   validates :body,
