@@ -46,7 +46,11 @@ group :development, :test do
   gem 'byebug', platform: :mri
   gem 'factory_girl_rails'
   # gem 'database_cleaner'
+  gem 'pry'
+  gem 'pry-doc'
   gem 'rspec-rails', '>3.0.0'
+  gem 'rubocop'
+  gem 'ruby_parser'
 end
 
 group :test do
