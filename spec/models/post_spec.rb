@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Post, :type => :model do
+RSpec.describe Post do
   it 'has a valid factory' do
     factory = FactoryGirl.create(:post)
     expect(factory).to be_valid

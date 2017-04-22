@@ -1,6 +1,6 @@
 require "rails_helper"
 
-RSpec.describe Comment, :type => :model do
+RSpec.describe Comment do
   it 'has a valid factory' do
     factory = FactoryGirl.create(:comment)
     expect(factory).to be_valid
