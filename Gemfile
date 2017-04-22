@@ -48,6 +48,7 @@ group :development, :test do
   # gem 'database_cleaner'
   gem 'pry'
   gem 'pry-doc'
+  gem 'rails-controller-testing'
   gem 'rspec-rails', '>3.0.0'
   gem 'rubocop'
   gem 'ruby_parser'
