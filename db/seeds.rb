@@ -6,27 +6,29 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(
-  email: 'user@example.com',
+john = User.create(
+  email: 'john@example.com',
   password: 'password'
 )
 
-User.create(
-  email: 'admin@example.com',
+jane = User.create(
+  email: 'jane@example.com',
   password: 'password'
 )
 
 # Create posts and attached comments
-4.times do
-  post = Post.create(
-    title: Faker::Lorem.sentence,
-    subtitle: Faker::Lorem.sentence,
-    text: Faker::Lorem.paragraph
-  )
-  3.times do
-    post.comments.create(
-      commenter: Faker::Internet.email,
-      body: Faker::Lorem.sentence
+[john, jane].each do |user|
+  4.times do
+    post = user.posts.create(
+      title: Faker::Lorem.sentence,
+      subtitle: Faker::Lorem.sentence,
+      text: Faker::Lorem.paragraph
     )
+    3.times do
+      post.comments.create(
+        commenter: Faker::Internet.email,
+        body: Faker::Lorem.sentence
+      )
+    end
   end
 end

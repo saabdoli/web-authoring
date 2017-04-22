@@ -5,5 +5,6 @@ FactoryGirl.define do
     f.title { Faker::Lorem.sentence }
     f.subtitle { Faker::Lorem.sentence }
     f.text { Faker::Lorem.paragraph(4) }
+    f.user
   end
 end
