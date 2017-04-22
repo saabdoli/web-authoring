@@ -5,5 +5,6 @@ FactoryGirl.define do
     f.commenter { Faker::Internet.email }
     f.body { Faker::Lorem.paragraph }
     f.post
+    f.user
   end
 end

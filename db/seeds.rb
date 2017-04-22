@@ -26,8 +26,8 @@ jane = User.create(
     )
     3.times do
       post.comments.create(
-        commenter: Faker::Internet.email,
-        body: Faker::Lorem.sentence
+        body: Faker::Lorem.sentence,
+        user: [john, jane].sample
       )
     end
   end

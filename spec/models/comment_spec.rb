@@ -11,8 +11,8 @@ RSpec.describe Comment, :type => :model do
     expect(comment).to be_valid
   end
 
-  it 'is not valid without a commenter' do
-    comment = FactoryGirl.build(:comment, commenter: nil)
+  it 'is not valid without a user' do
+    comment = FactoryGirl.build(:comment, user: nil)
     expect(comment).to_not be_valid
   end
 
