@@ -18,11 +18,12 @@ jane = User.create(
 
 # Create posts and attached comments
 [john, jane].each do |user|
-  4.times do
+  20.times do
     post = user.posts.create(
       title: Faker::Lorem.sentence,
       subtitle: Faker::Lorem.sentence,
-      text: Faker::Lorem.paragraph
+      text: Faker::Lorem.paragraph,
+      created_at: Faker::Time.between(10.days.ago, Date.today, :all)
     )
     3.times do
       post.comments.create(
